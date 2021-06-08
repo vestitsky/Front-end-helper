@@ -1,0 +1,24 @@
+#red-block {
+    color: black;
+    border: 5px solid black;
+    background-color: red;
+    width: 30%;
+    height: 150px;
+    float: left;
+}
+#green-block {
+    color: black;
+    border: 5px solid black;
+    background-color: green;
+    width: 30%;
+    height: 150px;
+    float: right;
+}
+#blue-block {
+    color: black;
+    border: 5px solid black;
+    background-color:blue;
+    width: 30%;
+    height: 150px;
+    margin: 0 auto;
+}

@@ -1,0 +1,71 @@
+body {
+    background-color: grey;
+}
+
+.grid_body {
+    display: grid;
+
+    /* grid-template-columns: 30% 150px 50%; */
+    /* grid-template-columns: 1fr 1fr 1fr; == grid-template-columns: 33.333% 33.333% 33.333%; */
+    /* grid-template-columns: auto 1fr 1fr; == Автоматическая регулировка ширины под содержимое*/ 
+    /* grid-template-columns: 200px minmax(150px, 1fr) 200px; Регулировка минимальной ширины column */
+    /* grid-template-columns: fit-content(600px) 1fr auto; Ограниченный размер колонки */
+
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr); /* Эквивалентно двум строкам ниже */
+    /* grid-template-columns: repeat(3, 1fr); Эквивалентно 1fr 1fr 1fr */
+    /* grid-template-rows: 1fr 1fr; */ 
+}
+.grid__item {
+    text-align: center;
+    border: 2px dashed black;
+    padding: 30px;
+}
+/* Конец Grid layout - определение сетки */
+
+.grid-wrapper {
+    display: grid;
+
+    grid-template: 
+    [start] "header header" 100px [row2]
+    [row2] "side content" 1fr [row-end] /150px 1fr; /* Эквивалентно строкам ниже */
+    /*
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+    "header header"
+    "side content";
+    */
+}
+
+.grid-header,
+.grid-side,
+.grid-content {
+    padding: 30px;
+    border: 2px dashed black;
+    margin: 0px 0px 15px 0px;
+}
+.grid-header {
+    grid-area: header;
+}
+.grid-side {
+    grid-area: side;
+}
+.grid-content  {
+    grid-area: content;
+}
+/* Конец Имена областей */
+
+.grid-auto {
+    display: grid;
+    /* Если не объявлен template колонок будет работать неявная сетка */
+    grid-auto-rows: 200px; /* Высота неявной сетки */
+    grid-auto-columns: 300px; /* Ширина неявной сетки */
+}
+.grid-auto__item {
+    text-align: center;
+    border: 2px dashed black;
+    padding: 30px;
+    font-size: 30px;
+}
+/* Конец неявной сетки */
+    

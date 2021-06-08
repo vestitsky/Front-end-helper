@@ -1,0 +1,48 @@
+* {
+    box-sizing: content-box;
+}
+body {
+    position: relative;
+}
+.box.header{
+    text-align: center;
+    position: relative;
+    float: right;
+    left: 15.9px;
+    bottom: 16px;
+    width: 100px;
+    height: 20px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+}
+.box {
+    background-color: grey;
+    border: 1px solid black;
+    width: 30.0%;
+    height: 100%;
+    position: relative;
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+}
+#header1{
+    background-color: blue;
+}
+#header2{
+    background-color: pink;
+}
+#header3{
+    background-color: purple;
+}
+@media (min-width: 768px) and (max-width: 961px){
+    .box.mainpoint{
+        width: 100%;
+    }
+}
+@media (max-width: 767px){
+    .box{
+        clear: left;
+    }
+}

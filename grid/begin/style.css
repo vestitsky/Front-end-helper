@@ -1,0 +1,18 @@
+body {
+    background-color: grey;
+}
+.grid {
+    display: grid;
+
+    font-size: 30px;
+    padding: 20px;
+    background-color: brown;
+    margin: 0px 0px 20px 0px;
+}
+.grid-inline {
+    display: inline-grid;
+
+    font-size: 30px;
+    padding: 20px;
+    background-color: cornflowerblue;
+}
