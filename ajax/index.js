@@ -22,11 +22,11 @@ function onImagesRecieved(array) {
 }
 
 function onTasksReceived(array) {
+	const result = document.querySelector("#tasks-result");
+	result.innerHTML = "";
 	array.forEach((element) => {
 		const li = document.createElement("li");
 		li.innerHTML = element.title;
-		document.querySelector("#tasks-result").appendChild(li);
+		result.appendChild(li);
 	});
 }
-
-createTask("helloooaaa");

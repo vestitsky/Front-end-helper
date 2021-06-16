@@ -1,3 +1,6 @@
+debugger;
+createTask("learn HTML");
+
 function getImages(pageNumber) {
 	const promise = axios.get(
 		`https://repetitora.net/api/JS/Images?page=${pageNumber}&count=1`
@@ -37,4 +40,20 @@ function createTask(title) {
 	});
 }
 
-createTask("helloooaaa");
+function updateTasks() {
+	const promise = axios.put(
+		`https://repetitora.net/api/JS/Tasks?widgetId=4242`
+	);
+	return promise.then((response) => {
+		return response.data;
+	});
+}
+
+function deleteTasks(id) {
+	const promise = axios.delete(
+		`https://repetitora.net/api/JS/Tasks?widgetId=4242&widgetId=4242&taskId=${id}`
+	);
+	return promise.then((response) => {
+		return response.data;
+	});
+}
